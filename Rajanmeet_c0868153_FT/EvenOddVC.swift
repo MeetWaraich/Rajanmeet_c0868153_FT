@@ -42,6 +42,14 @@ class EvenOddVC: UIViewController {
             print("Even")
         }
         else {
+            let alertController = UIAlertController(
+                   title: "Your title", message: "Result: Oopss... Wrong answer Right Answer is Even ", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(
+                   title: "Close Alert", style: .default, handler: nil)
+            //you can add custom actions as well
+            alertController.addAction(defaultAction)
+
+            present(alertController, animated: true, completion: nil)
             print("wrong answer")
         }
     }
@@ -53,12 +61,14 @@ class EvenOddVC: UIViewController {
         }
         else {
             let alertController = UIAlertController(
-                   title: "Play Again!", message: "Your message", preferredStyle: .alert)
+                   title: "Play Again!", message: "Result: Oopss... Wrong answer Right Answer is Odd ", preferredStyle: .alert)
             let defaultAction = UIAlertAction(
                    title: "Show Progress", style: .default, handler: nil)
             alertController.addAction(defaultAction)
 
             present(alertController, animated: true, completion: nil)
+            print("wrong answer")
+
         }
     }
     
